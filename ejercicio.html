@@ -40,15 +40,14 @@
       <canvas id="grafico" width="400" height="300"></canvas>
     </section>
   </main>
+  <script src="script.js"></script>
 
+  <button onclick="goBack()">Volver</button>
   <script>
-    function calcular() {
-      var v0 = parseFloat(document.getElementById("velocidad-inicial").value);
-      var a = parseFloat(document.getElementById("aceleracion").value);
-      var t = parseFloat(document.getElementById("tiempo").value);
-      var x = v0 * t + 0.5 * a * t * t;
-      document.getElementById("posicion-final").value = x.toFixed(2);
+    function goBack() {
+      history.back();
     }
   </script>
+  
 </body>
 </html>
