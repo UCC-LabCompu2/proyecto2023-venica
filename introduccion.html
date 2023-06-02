@@ -5,8 +5,8 @@
   <meta name="author" content="Pablo Venica">
   <meta name="description" content="Ejercicio de MRUV">
   <meta name="keywords" content="MRUV, física">
+  <link rel="stylesheet" type="text/css" href="miEstilo.css">
 </head>
-<link rel="stylesheet" type="text/css" href="miEstilo.css">
 <body>
   <header>
     <h1>Introducción</h1>
@@ -20,26 +20,34 @@
     x = xo + vot + 1/2at^2
   </p>
   <p>
-    donde:
+    Donde:
   </p>
   <p>
-    x: es la posición final del objeto
+    x: Es la posición final del objeto
   </p>
   <p>
-    xo: es la posición inicial del objeto
+    xo: Es la posición inicial del objeto
   </p>
   <p>
-    vo: es la velocidad inicial del objeto
+    vo: Es la velocidad inicial del objeto
   </p>
   <p>
-    t: es el tiempo transcurrido desde el inicio del movimiento
+    t: Es el tiempo transcurrido desde el inicio del movimiento
   </p>
   <p>
-    a: es la aceleración constante del objeto
+    a: Es la aceleración constante del objeto
   </p>
   <p>
     Esta ecuación se utiliza para calcular la posición final de un objeto en función de su posición inicial, velocidad inicial, aceleración constante y tiempo transcurrido. También se pueden utilizar otras ecuaciones para calcular la velocidad final, la velocidad media y la aceleración en el MRUV.
     El MRUV es un concepto importante en la física y se utiliza para describir muchos tipos de movimientos, como el movimiento de los objetos que caen libremente, el movimiento de los vehículos en las carreteras y el movimiento de los objetos que se lanzan hacia arriba y hacia abajo.
   </p>
+
+  <button onclick="goBack()">Volver</button>
+  <script>
+    function goBack() {
+      history.back();
+    }
+  </script>
+  
 </body>
 </html>
