@@ -1,37 +1,37 @@
 /*index*/
 h1 {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 32px;
-    color:#000000;
-  }
-  
-  header img {
-    border: 1px solid gray;
-    margin: 10px;
-  }
-  
-  nav ul {
-    background-color: lightgray;
-    text-align: center;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  footer {
-    background-color: darkgray;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
+  font-family: 'Roboto Mono', monospace;
+  font-size: 32px;
+  color:#000000;
+}
+
+header img {
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+nav ul {
+  background-color: lightgray;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background-color: darkgray;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
 
 /*introduccion*/
 body {
@@ -41,16 +41,19 @@ body {
   margin: 0;
   padding: 0;
 }
+
 header {
   background-color:#0077cc;
   color: #fff;
   padding: 10px;
   text-align: center;
 }
+
 h1 {
   margin: 0;
   font-size: 36px;
 }
+
 p {
   margin: 20px;
   font-size: 18px;
@@ -111,10 +114,20 @@ canvas {
   border: 1px solid #ccc;
 }
 
-a:link, a:visited{
-    color: #000000;
+a:link, a:visited {
+  color: #000000;
 }
 
-a:hover{
-    font-size: 1.4em;
+a:hover {
+  font-size: 1.4em;
+}
+
+/* Estilo por ID */
+#mi-elemento {
+  font-weight: bold;
+}
+
+/* Estilo por clase */
+.mi-clase {
+  background-color: yellow;
 }
