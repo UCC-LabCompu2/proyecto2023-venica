@@ -1,9 +1,6 @@
 /**
  * Comprueba si los valores ingresados son correctos.
  * @method comprobarValores
- * @param {string} velocidadInicial - La velocidad inicial ingresada por el usuario.
- * @param {number} aceleracion - La aceleración ingresada por el usuario.
- * @param {number} tiempo - El tiempo ingresado por el usuario.
  */
 function comprobarValores() {
   const velocidadInicial = document.getElementById('velocidad-inicial').value;
@@ -48,18 +45,41 @@ function calcular() {
  * @method dibujar
  * @param {number} posicionFinal - La posición final calculada.
  */
-function dibujar(posicionFinal) {
+function dibujarGrafico() {
   const canvas = document.getElementById('grafico');
   const ctx = canvas.getContext('2d');
-  const x = posicionFinal * 10; // Escala la posición para el dibujo
+  const width = canvas.width;
+  const height = canvas.height;
 
-  // Limpia el canvas
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Limpia el lienzo
+  ctx.clearRect(0, 0, width, height);
 
-  // Dibuja algo en el canvas basado en la posición final calculada y otros parámetros.
-  // Aquí se puede agregar el código para realizar el dibujo deseado.
+  // Define los puntos del gráfico
+  const puntos = [
+    { x: 0, y: height },
+    { x: width / 2, y: height - 100 },
+    { x: width, y: height },
+  ];
 
-  // Ejemplo: Dibuja un rectángulo representando la posición final
-  ctx.fillStyle = 'blue';
-  ctx.fillRect(0, canvas.height - 10, x, 10);
+  // Configura el estilo de la línea
+  ctx.strokeStyle = 'blue';
+  ctx.lineWidth = 2;
+
+  // Dibuja el gráfico
+  ctx.beginPath();
+  ctx.moveTo(puntos[0].x, puntos[0].y);
+  for (let i = 1; i < puntos.length; i++) {
+    ctx.lineTo(puntos[i].x, puntos[i].y);
+  }
+  ctx.stroke();
+}
+
+// Llama a la función dibujarGrafico cuando se carga la página
+window.onload = dibujarGrafico;
+
+/**
+ * Función que redirige al archivo "index.html".
+ */
+function volverIndex() {
+  window.location.href = "index.html";
 }
