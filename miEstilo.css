@@ -1,32 +1,32 @@
 /*index*/
-h1 {
+#titulo {
   font-family: 'Roboto Mono', monospace;
   font-size: 32px;
-  color:#000000;
+  color: #000000;
 }
 
-header img {
+#logo-header {
   border: 1px solid gray;
   margin: 10px;
 }
 
-nav ul {
+.menu {
   background-color: lightgray;
   text-align: center;
 }
 
-nav ul li {
+.menu-item {
   display: inline-block;
   margin-right: 20px;
 }
 
-nav ul li a {
+.menu-item a {
   color: black;
   text-decoration: none;
   font-weight: bold;
 }
 
-footer {
+#footer {
   background-color: darkgray;
   color: white;
   text-align: center;
@@ -43,18 +43,18 @@ body {
 }
 
 header {
-  background-color:#0077cc;
+  background-color: #0077cc;
   color: #fff;
   padding: 10px;
   text-align: center;
 }
 
-h1 {
+#titulo {
   margin: 0;
   font-size: 36px;
 }
 
-p {
+.parrafo {
   margin: 20px;
   font-size: 18px;
   line-height: 1.5;
@@ -68,7 +68,7 @@ body {
   padding: 0;
 }
 
-main {
+#contenido-principal {
   width: 90%;
   margin: 0 auto;
   padding: 20px;
@@ -86,7 +86,7 @@ label {
   color: #333;
 }
 
-input[type="number"] {
+.input-numero {
   width: 80%;
   padding: 10px;
   border: none;
@@ -97,7 +97,7 @@ input[type="number"] {
   color: #333;
 }
 
-button {
+.boton {
   padding: 10px 20px;
   background-color: #008CBA;
   color: #fff;
@@ -107,27 +107,18 @@ button {
   cursor: pointer;
 }
 
-canvas {
+#grafico {
   width: 100%;
   height: 300px;
   margin-top: 20px;
   border: 1px solid #ccc;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: #000000;
 }
 
 a:hover {
   font-size: 1.4em;
-}
-
-/* Estilo por ID */
-#mi-elemento {
-  font-weight: bold;
-}
-
-/* Estilo por clase */
-.mi-clase {
-  background-color: yellow;
 }
