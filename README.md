@@ -1,5 +1,5 @@
-# Ejercicio de Fisica
-Esta pagina contiene un ejercicio de Fisica
+# Ejercicio de Física
+Esta página contiene un ejercicio de Física
 
 ## Link
 * Link: https://ucc-labcompu2.github.io/proyecto2023-venica/
@@ -7,7 +7,7 @@ Esta pagina contiene un ejercicio de Fisica
 ## Autores
 * Venica, Pablo
 
-## Tecnologia Usadas
+## Tecnología Usadas
 * HTML5
 * CSS3
 
