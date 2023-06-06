@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Pablo Venica">
   <meta name="description" content="Ejercicio de MRUV">
   <meta name="keywords" content="MRUV, física">
   <title>Ejercicio de MRUV</title>
+  <script src="script.js"></script>
 </head>
 <link rel="stylesheet" type="text/css" href="miEstilo.css">
+
 <body>
   <main id="contenido-principal">
     <section>
@@ -37,13 +40,12 @@
 
     <section>
       <h2>Gráfico de la posición en función del tiempo</h2>
-      <canvas id="grafico"></canvas>
+      <canvas id="grafico" width="400" height="200"></canvas>
     </section>
   </main>
 
-  <script src="script.js"></script>
-
-  <button id="backButton" onclick="volverIndex()">Volver</button>
+  <button id="boton-volver" onclick="volverIndex()">Volver</button>
 
 </body>
+
 </html>
