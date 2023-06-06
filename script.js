@@ -1,85 +1,80 @@
 /**
- * Comprueba si los valores ingresados son correctos.
- * @method comprobarValores
- */
-function comprobarValores() {
-  const velocidadInicial = document.getElementById('velocidad-inicial').value;
-  const aceleracion = document.getElementById('aceleracion').value;
-  const tiempo = document.getElementById('tiempo').value;
-
-  if (isNaN(velocidadInicial) || isNaN(aceleracion) || isNaN(tiempo)) {
-    // Los valores ingresados no son válidos. Se muestra un alert y se blanquea el contenido del campo.
-    alert('Los valores ingresados no son válidos. Por favor, ingrese números.');
-    document.getElementById('velocidad-inicial').value = '';
-    document.getElementById('aceleracion').value = '';
-    document.getElementById('tiempo').value = '';
-  }
-}
-
-/**
- * Calcula algo en base a los valores ingresados por el usuario en los inputs.
+ * Calcula la posición final y dibuja un gráfico en el canvas.
  * @method calcular
  */
 function calcular() {
+  // Obtener los valores de los inputs
   const velocidadInicial = parseFloat(document.getElementById('velocidad-inicial').value);
   const aceleracion = parseFloat(document.getElementById('aceleracion').value);
   const tiempo = parseFloat(document.getElementById('tiempo').value);
 
-  if (isNaN(velocidadInicial) || isNaN(aceleracion) || isNaN(tiempo)) {
-    // Los valores ingresados no son válidos. Se muestra un alert y se blanquea el contenido del campo.
-    alert('Los valores ingresados no son válidos. Por favor, ingrese números.');
-    document.getElementById('posicion-final').value = '';
-    return;
+  // Calcular la posición final utilizando la fórmula del MRUV
+  const posicionFinal = velocidadInicial * tiempo + 0.5 * aceleracion * tiempo ** 2;
+
+  // Mostrar la posición final en el input correspondiente
+  document.getElementById('posicion-final').value = posicionFinal.toFixed(2);
+
+  // Generar las posiciones para dibujar el gráfico
+  const posiciones = [];
+  for (let t = 0; t <= tiempo; t += 0.1) {
+    const posicion = velocidadInicial * t + 0.5 * aceleracion * t ** 2;
+    posiciones.push({ tiempo: t, posicion });
   }
 
-  // Realiza el cálculo basado en los valores ingresados.
-  const posicionFinal = velocidadInicial * tiempo + 0.5 * aceleracion * tiempo * tiempo;
-  document.getElementById('posicion-final').value = posicionFinal;
-
-  // Llama a la función para realizar un dibujo en un canvas representativo y acorde a los valores ingresados.
-  dibujar(posicionFinal);
+  // Dibujar el gráfico en el canvas
+  dibujarGrafico(posiciones);
 }
 
 /**
- * Realiza un dibujo sobre un canvas que sea representativo y acorde a los valores ingresados.
- * @method dibujar
- * @param {number} posicionFinal - La posición final calculada.
+ * Dibuja un gráfico en el canvas utilizando las posiciones proporcionadas.
+ * @method dibujarGrafico
+ * @param {Array} posiciones - Array de objetos con las posiciones {tiempo, posicion}.
  */
-function dibujarGrafico() {
+function dibujarGrafico(posiciones) {
   const canvas = document.getElementById('grafico');
   const ctx = canvas.getContext('2d');
-  const width = canvas.width;
-  const height = canvas.height;
 
-  // Limpia el lienzo
-  ctx.clearRect(0, 0, width, height);
+  // Limpiar el canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Define los puntos del gráfico
-  const puntos = [
-    { x: 0, y: height },
-    { x: width / 2, y: height - 100 },
-    { x: width, y: height },
-  ];
-
-  // Configura el estilo de la línea
+  // Configurar el estilo del gráfico
   ctx.strokeStyle = 'blue';
   ctx.lineWidth = 2;
 
-  // Dibuja el gráfico
+  // Calcular los valores máximo y mínimo de tiempo y posición
+  const maxTiempo = Math.max(...posiciones.map(p => p.tiempo));
+  const minTiempo = Math.min(...posiciones.map(p => p.tiempo));
+  const maxPosicion = Math.max(...posiciones.map(p => p.posicion));
+  const minPosicion = Math.min(...posiciones.map(p => p.posicion));
+
+  // Calcular la escala en el eje x e y
+  const escalaX = canvas.width / (maxTiempo - minTiempo);
+  const escalaY = canvas.height / (maxPosicion - minPosicion);
+
+  // Dibujar los puntos del gráfico
   ctx.beginPath();
-  ctx.moveTo(puntos[0].x, puntos[0].y);
-  for (let i = 1; i < puntos.length; i++) {
-    ctx.lineTo(puntos[i].x, puntos[i].y);
-  }
+  posiciones.forEach(p => {
+    const x = (p.tiempo - minTiempo) * escalaX;
+    const y = canvas.height - (p.posicion - minPosicion) * escalaY;
+    ctx.lineTo(x, y);
+
+  });
+  ctx.stroke();
+
+  // Dibujar los ejes
+  ctx.beginPath();
+  ctx.moveTo(0, canvas.height - (0 - minPosicion) * escalaY);
+  ctx.lineTo(canvas.width, canvas.height - (0 - minPosicion) * escalaY);
+  ctx.moveTo((0 - minTiempo) * escalaX, 0);
+  ctx.lineTo((0 - minTiempo) * escalaX, canvas.height);
   ctx.stroke();
 }
 
-// Llama a la función dibujarGrafico cuando se carga la página
-window.onload = dibujarGrafico;
-
 /**
- * Función que redirige al archivo "index.html".
+ * Redirige al usuario a la página inicial.
+ * @method volverIndex
  */
 function volverIndex() {
-  window.location.href = "index.html";
+  // Volver a la página inicial
+  window.location.href = 'index.html';
 }
