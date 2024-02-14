@@ -8,6 +8,12 @@ function calcular() {
   const aceleracion = parseFloat(document.getElementById('aceleracion').value);
   const tiempo = parseFloat(document.getElementById('tiempo').value);
 
+  // Validar los valores de entrada
+  if (isNaN(velocidadInicial) || isNaN(aceleracion) || isNaN(tiempo)) {
+    alert('Por favor ingrese valores numéricos válidos en todos los campos.');
+    return;
+  }
+
   // Calcular la posición final utilizando la fórmula del MRUV
   const posicionFinal = velocidadInicial * tiempo + 0.5 * aceleracion * tiempo ** 2;
 
@@ -37,6 +43,12 @@ function dibujarGrafico(posiciones) {
   // Limpiar el canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+  // Validar que haya al menos dos posiciones para dibujar un gráfico
+  if (posiciones.length < 2) {
+    alert('No hay suficientes datos para dibujar el gráfico.');
+    return;
+  }
+
   // Configurar el estilo del gráfico
   ctx.strokeStyle = 'blue';
   ctx.lineWidth = 2;
@@ -53,11 +65,11 @@ function dibujarGrafico(posiciones) {
 
   // Dibujar los puntos del gráfico
   ctx.beginPath();
+  ctx.moveTo(0, canvas.height - (posiciones[0].posicion - minPosicion) * escalaY);
   posiciones.forEach(p => {
     const x = (p.tiempo - minTiempo) * escalaX;
     const y = canvas.height - (p.posicion - minPosicion) * escalaY;
     ctx.lineTo(x, y);
-
   });
   ctx.stroke();
 
@@ -78,3 +90,4 @@ function volverIndex() {
   // Volver a la página inicial
   window.location.href = 'index.html';
 }
+
