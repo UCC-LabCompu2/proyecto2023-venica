@@ -2,51 +2,55 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Pablo Venica">
-  <meta name="description" content="Ejercicio de MRUV">
-  <meta name="keywords" content="MRUV, física">
-  <title>Ejercicio de MRUV</title>
-  <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="author" content="Pablo Venica">
+    <meta name="description" content="Ejercicio de MRUV">
+    <meta name="keywords" content="MRUV, física">
+    <title>Ejercicio de MRUV</title>
+    <link rel="stylesheet" type="text/css" href="miEstilo.css">
+    <script src="script.js"></script>
 </head>
-<link rel="stylesheet" type="text/css" href="miEstilo.css">
-
+<body onload="aparecerImagen()">
 <body>
-  <main id="contenido-principal">
-    <a href="index.html"></a>
-    <section>
-      <h2>Datos del problema</h2>
-      <div>
-        <label for="velocidad-inicial">Velocidad inicial (m/s):</label>
-        <input type="number" id="velocidad-inicial" step="0.1" class="input-numero">
-      </div>
-      <div>
-        <label for="aceleracion">Aceleración (m/s²):</label>
-        <input type="number" id="aceleracion" step="0.1" class="input-numero">
-      </div>
-      <div>
-        <label for="tiempo">Tiempo (s):</label>
-        <input type="number" id="tiempo" step="0.1" class="input-numero">
-      </div>
-    </section>
+    <main id="contenido-principal">
+        <a href="index.html"></a>
+        <section>
+            <h2>Datos del problema</h2>
+            <div>
+                <label for="x0">Distancia Inicial (x₀): </label>
+                <input type="number" id="x0" name="distanciainicial" value="0" min="0" max="25" step="0.5">
+                <span id="valor_di">0</span>
+                m
+            </div>
+            <div>
+                <label for="v0">Velocidad Inicial (v₀): </label>
+                <input type="number" id="v0" value="0" min="0" max="15" step="0.1">
+                <span id="valor_vi">0</span>
+                m/s
+            </div>
+            <div>
+                <label for="a">Aceleración (m/s<sup>2</sup>): </label>
+                <input type="number" id="a" name="aceleracion" value="0" min="0" max="10" step="0.1">
+                <span id="valor_a">0</span>
+                m/s<sup>2</sup>
+            </div>
+        </section>
 
-    <section>
-      <h2>Calcula la posición final</h2>
-      <button onclick="calcular()" class="boton">Calcular</button>
-      <div>
-        <label for="posicion-final">Posición final (m):</label>
-        <input type="number" id="posicion-final" disabled class="input-numero">
-      </div>
-    </section>
+        <p class="bot">
+          <button type="button" id="boton" onclick="calcular()">
+            Calcular:
+          </button>
+      </p>
 
-    <section>
-      <h2>Gráfico de la posición en función del tiempo</h2>
-      <canvas id="grafico" width="400" height="200"></canvas>
-    </section>
-  </main>
+        <section>
+            <h2>Gráfico de la posición en función del tiempo</h2>
+            <canvas id="grafico" width="1100px" height="105px"></canvas>
+        </section>
+    </main>
 
-  <button id="boton-volver" onclick="volverIndex()">Volver</button>
+    <button id="boton-volver" onclick="volverIndex()">Volver</button>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
