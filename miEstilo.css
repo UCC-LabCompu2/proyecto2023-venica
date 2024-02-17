@@ -49,7 +49,7 @@ header {
   text-align: center;
 }
 
-#titulo {
+#titulo-introduccion {
   margin: 0;
   font-size: 36px;
 }
@@ -61,13 +61,6 @@ header {
 }
 
 /*ejercicio*/
-body {
-  font-family: 'Times New Roman', Times, serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-}
-
 #contenido-principal {
   width: 90%;
   margin: 0 auto;
@@ -86,7 +79,8 @@ label {
   color: #333;
 }
 
-.input-numero {
+/* Estilos para los inputs de tipo número */
+input[type="number"] {
   width: 80%;
   padding: 10px;
   border: none;
@@ -97,7 +91,8 @@ label {
   color: #333;
 }
 
-.boton {
+/* Estilos para el botón de calcular */
+#boton-calcular {
   padding: 10px 20px;
   background-color: #008CBA;
   color: #fff;
@@ -107,6 +102,19 @@ label {
   cursor: pointer;
 }
 
+/* Estilos para el botón de reiniciar */
+#boton-reiniciar {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Estilos para los botones */
+.boton,
 #boton-volver {
   padding: 10px 20px;
   background-color: #008CBA;
@@ -117,12 +125,13 @@ label {
   cursor: pointer;
 }
 
+/* Estilos para el gráfico */
 #grafico {
   background-color: white;
   text-align: center;
 }
 
-
+/* Estilos para los enlaces */
 a:link,
 a:visited {
   color: #000000;
