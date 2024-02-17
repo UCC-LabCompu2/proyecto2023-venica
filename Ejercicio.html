@@ -10,41 +10,44 @@
     <link rel="stylesheet" type="text/css" href="miEstilo.css">
     <script src="script.js"></script>
 </head>
+
 <body onload="aparecerImagen()">
-<body>
     <main id="contenido-principal">
         <a href="index.html"></a>
         <section>
             <h2>Datos del problema</h2>
             <div>
                 <label for="x0">Distancia Inicial (x₀): </label>
-                <input type="number" id="x0" name="distanciainicial" value="0" min="0" max="25" step="0.5">
+                <input type="number" id="x0" name="distanciainicial" value="0" min="0" max="25" step="0.5"
+                oninput="mostrarValor('valor_di', this.value)">
                 <span id="valor_di">0</span>
                 m
             </div>
             <div>
                 <label for="v0">Velocidad Inicial (v₀): </label>
-                <input type="number" id="v0" value="0" min="0" max="15" step="0.1">
+                <input type="number" id="v0" value="0" min="0" max="15" step="0.1"
+                oninput="mostrarValor('valor_vi', this.value)">
                 <span id="valor_vi">0</span>
                 m/s
             </div>
             <div>
                 <label for="a">Aceleración (m/s<sup>2</sup>): </label>
-                <input type="number" id="a" name="aceleracion" value="0" min="0" max="10" step="0.1">
+                <input type="number" id="a" name="aceleracion" value="0" min="0" max="10" step="0.1"
+                oninput="mostrarValor('valor_a', this.value)">
                 <span id="valor_a">0</span>
                 m/s<sup>2</sup>
             </div>
         </section>
 
         <p class="bot">
-          <button type="button" id="boton" onclick="calcular()">
-            Calcular:
-          </button>
-      </p>
+            <button type="button" id="boton-calcular" onclick="calcular()">Calcular</button>
+
+            <button id="boton-reiniciar" onclick="reiniciar()">Reiniciar</button>
+        </p>
 
         <section>
             <h2>Gráfico de la posición en función del tiempo</h2>
-            <canvas id="grafico" width="1100px" height="105px"></canvas>
+            <canvas id="grafico" width="1100px" height="130px"></canvas>
         </section>
     </main>
 
