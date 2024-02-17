@@ -60,14 +60,14 @@ let comenzarAnimacion = () => {
   console.log("Empieza Animacion");
   x = 0;
   intervalId = setInterval(animarImagen, 0);
-  document.getElementById("boton").disabled = true;
+  document.getElementById("boton-calcular").disabled = true;
   setTimeout(detenerAuto, 1500);
 }
 
 let detenerAuto = () => {
   console.log("Termino animacion");
   clearInterval(intervalId); 
-  document.getElementById("boton").disabled = false;
+  document.getElementById("boton-calcular").disabled = false;
 }
 
 let aparecerImagen = () => {
@@ -96,4 +96,6 @@ let reiniciar = () => {
   aparecerImagen();
 }
 
-
+function volverIndex() {
+  window.location.href = "index.html"; // Funcion para volver al inicio
+}
