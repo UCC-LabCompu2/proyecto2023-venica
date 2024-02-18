@@ -84,6 +84,22 @@ let aparecerImagen = () => {
   }
 }
 
+// Función para calcular y mostrar el resultado final de la posición del objeto en un MRUV
+function mostrarResultadoFinal() {
+  // Obtener los valores ingresados por el usuario
+  let x0 = parseFloat(document.getElementById("x0").value); // Distancia inicial
+  let v0 = parseFloat(document.getElementById("v0").value); // Velocidad inicial
+  let a = parseFloat(document.getElementById("a").value); // Aceleración
+
+  // Calcular la posición final usando la fórmula del MRUV
+  let t = (2 * v0) / a; // Calcular el tiempo necesario para detenerse
+  let x = x0 + v0 * t + 0.5 * a * Math.pow(t, 2); // Calcular la posición final
+
+  // Mostrar el resultado en un mensaje de alerta
+  alert("La posición final del objeto es: " + x.toFixed(2) + " metros");
+}
+
+
 let reiniciar = () => {
   document.getElementById("x0").value = 0;
   document.getElementById("v0").value = 0;
