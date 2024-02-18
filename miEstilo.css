@@ -102,6 +102,16 @@ input[type="number"] {
   cursor: pointer;
 }
 
+#boton-mostrar-resultado {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
 /* Estilos para el botón de reiniciar */
 #boton-reiniciar {
   padding: 10px 20px;
