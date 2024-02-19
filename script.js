@@ -3,7 +3,10 @@ let mostrarValor = (id, valor) => {
   document.getElementById(id).textContent = valor;
 }
 
-// Función para realizar el cálculo y comenzar la animación
+/**
+ * Función para realizar el cálculo y comenzar la animación.
+ * @method calcular
+ */
 let calcular = () => {
   let vi, di, a;
 
@@ -14,7 +17,7 @@ let calcular = () => {
 
   // Verificar si se proporcionaron suficientes datos para comenzar la animación
   if ((vi === 0 && a === 0) || (vi === 0 && di === 0) || (di === 0 && a === 0) || (vi === 0 && di === 0 && a === 0)) {
-      alert("Solo 1 dato puede ser igual a 0.");
+      alert("Solo 1 dato puede ser igual a 0 (Distancia Inicial).");
       reiniciar(); // Reiniciar los campos de entrada
   } else {
       comenzarAnimacion(); // Comenzar la animación
@@ -25,7 +28,10 @@ let calcular = () => {
 let x = 0;
 let intervalId; // Necesario definir intervalId fuera de la función comenzarAnimacion
 
-// Función para animar la imagen del auto
+/**
+ * Función para animar la imagen del auto.
+ * @method animarImagen
+ */
 let animarImagen = () => {
   const canvas = document.getElementById("grafico");
   const ctx = canvas.getContext("2d"); 
@@ -65,7 +71,10 @@ let animarImagen = () => {
   }
 }
 
-// Función para comenzar la animación
+/**
+ * Función para comenzar la animación.
+ * @method comenzarAnimacion
+ */
 let comenzarAnimacion = () => {
   console.log("Empieza Animacion");
   x = 0;
@@ -74,14 +83,20 @@ let comenzarAnimacion = () => {
   setTimeout(detenerAuto, 1500); // Detener la animación después de 1500 ms
 }
 
-// Función para detener la animación
+/**
+ * Función para detener la animación.
+ * @method detenerAuto
+ */
 let detenerAuto = () => {
   console.log("Termino animacion");
   clearInterval(intervalId); // Detener la animación
   document.getElementById("boton-calcular").disabled = false; // Habilitar el botón de calcular
 }
 
-// Función para mostrar la imagen del auto inicialmente
+/**
+ * Función para mostrar la imagen del auto inicialmente.
+ * @method aparecerImagen
+ */
 let aparecerImagen = () => {
   const canvas = document.getElementById("grafico");
   const ctx = canvas.getContext("2d");
@@ -97,7 +112,10 @@ let aparecerImagen = () => {
   }
 }
 
-// Función para reiniciar los campos de entrada y mostrar la imagen inicial
+/**
+ * Función para reiniciar los campos de entrada y mostrar la imagen inicial.
+ * @method reiniciar
+ */
 let reiniciar = () => {
   document.getElementById("x0").value = 0;
   document.getElementById("v0").value = 0;
@@ -110,7 +128,10 @@ let reiniciar = () => {
   aparecerImagen(); // Mostrar la imagen inicial
 }
 
-// Función para calcular y mostrar el resultado final de la posición del objeto en un MRUV
+/**
+ * Función para calcular y mostrar el resultado final de la posición del objeto en un MRUV.
+ * @method mostrarResultadoFinal
+ */
 function mostrarResultadoFinal() {
   // Obtener los valores ingresados por el usuario
   let x0 = parseFloat(document.getElementById("x0").value); // Distancia inicial
@@ -127,7 +148,10 @@ function mostrarResultadoFinal() {
   alert("La posición final del objeto es: " + x.toFixed(2) + " metros");
 }
 
-// Función para redirigir al usuario a la página de inicio
+/**
+ * Función para redirigir al usuario a la página de inicio.
+ * @method volverIndex
+ */
 function volverIndex() {
   window.location.href = "index.html"; // Redirigir al usuario a la página de inicio
 }
