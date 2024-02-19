@@ -75,7 +75,7 @@ Esta página contiene un ejercicio de Física
 Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
 - [X] Una función que compruebe si los valores ingresados son correctos, y si no lo son, que le indique al usuario por un alert, y que blanquee el contenido del campo.
 - [X] Una función que calcule algo en base a los valores ingresados por el usuario en los inputs.
-- [ ] Una función que realice un dibujo sobre un canvas (debe ser representativo y acorde a los valores ingreados).
+- [X] Una función que realice un dibujo sobre un canvas (debe ser representativo y acorde a los valores ingreados).
 - [X] El código Js debe estar en un archivo externo
 - [X] Se debe emplear var, let o const según corresponda para mayor eficiencia
 
@@ -97,9 +97,9 @@ Se debe agregar funcionalidad Js a la página HTML+CSS desarrollada
 
    
 ## Requisitos del FINAL
-- [ ] Todas las correcciones y mejoras solicitadas durante el primer y segundo parcial deben estar corregidas.
-- [ ] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
-- [ ] No debe haber errores JavaScript presentes (F12 > Consola)
-- [ ] Debe cumplir con TODOS los requisitos del 1er y 2do Parcial (si se agrego código nuevo en Js, se debe documentar, si hay nuevos inputs de html deben contener su label, etc)
-- [ ] El Canvas debe poseer animación con setInterval() o requestAnimationFrame()
-- [ ] El cálculo del ejercicio de física/etc debe ser el correcto, independientemente de los valores ingresados.
+- [X] Todas las correcciones y mejoras solicitadas durante el primer y segundo parcial deben estar corregidas.
+- [X] No debe haber errores presentes en el código (realizar Code > Inspect Code para verificar que no haya errores)
+- [X] No debe haber errores JavaScript presentes (F12 > Consola)
+- [X] Debe cumplir con TODOS los requisitos del 1er y 2do Parcial (si se agrego código nuevo en Js, se debe documentar, si hay nuevos inputs de html deben contener su label, etc)
+- [X] El Canvas debe poseer animación con setInterval() o requestAnimationFrame()
+- [X] El cálculo del ejercicio de física/etc debe ser el correcto, independientemente de los valores ingresados.
