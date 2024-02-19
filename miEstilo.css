@@ -1,152 +1,126 @@
-/*index*/
+/* Estilos para la página de inicio */
+/* Sección Index */
 #titulo {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 32px;
-  color: #000000;
+  font-family: 'Roboto Mono', monospace; /* Fuente del título */
+  font-size: 32px; /* Tamaño del título */
+  color: #000000; /* Color del texto */
 }
 
 #logo-header {
-  border: 1px solid gray;
-  margin: 10px;
+  border: 1px solid gray; /* Borde del logotipo */
+  margin: 10px; /* Margen del logotipo */
 }
 
 .menu {
-  background-color: lightgray;
-  text-align: center;
+  background-color: lightgray; /* Color de fondo del menú */
+  text-align: center; /* Alineación del texto del menú */
 }
 
 .menu-item {
-  display: inline-block;
-  margin-right: 20px;
+  display: inline-block; /* Mostrar elementos del menú en línea */
+  margin-right: 20px; /* Margen derecho entre elementos del menú */
 }
 
 .menu-item a {
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
+  color: black; /* Color del enlace del menú */
+  text-decoration: none; /* Quitar decoración de enlace */
+  font-weight: bold; /* Peso de la fuente del enlace */
 }
 
 #footer {
-  background-color: darkgray;
-  color: white;
-  text-align: center;
-  padding: 10px;
+  background-color: darkgray; /* Color de fondo del pie de página */
+  color: white; /* Color del texto del pie de página */
+  text-align: center; /* Alineación del texto del pie de página */
+  padding: 10px; /* Relleno del pie de página */
 }
 
-/*introduccion*/
+/* Sección Introducción */
+/* Estilos generales para el cuerpo de la página */
 body {
-  font-family: 'Times New Roman', Times, serif;
-  background-color: #f2f2f2;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  font-family: 'Times New Roman', Times, serif; /* Fuente del cuerpo */
+  background-color: #f2f2f2; /* Color de fondo del cuerpo */
+  color: #333; /* Color del texto del cuerpo */
+  margin: 0; /* Eliminar márgenes predeterminados */
+  padding: 0; /* Eliminar relleno predeterminado */
 }
 
+/* Estilos para el encabezado */
 header {
-  background-color: #0077cc;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+  background-color: #0077cc; /* Color de fondo del encabezado */
+  color: #fff; /* Color del texto del encabezado */
+  padding: 10px; /* Relleno del encabezado */
+  text-align: center; /* Alineación del texto del encabezado */
 }
 
 #titulo-introduccion {
-  margin: 0;
-  font-size: 36px;
+  margin: 0; /* Eliminar margen del título de introducción */
+  font-size: 36px; /* Tamaño del título de introducción */
 }
 
 .parrafo {
-  margin: 20px;
-  font-size: 18px;
-  line-height: 1.5;
+  margin: 20px; /* Margen de los párrafos */
+  font-size: 18px; /* Tamaño del texto de los párrafos */
+  line-height: 1.5; /* Altura de línea de los párrafos */
 }
 
-/*ejercicio*/
+/* Sección Ejercicio */
+/* Estilos para el contenido principal */
 #contenido-principal {
-  width: 90%;
-  margin: 0 auto;
-  padding: 20px;
+  width: 90%; /* Ancho del contenido principal */
+  margin: 0 auto; /* Centrar el contenido principal */
+  padding: 20px; /* Relleno del contenido principal */
 }
 
 h2 {
-  color: #1a1a1a;
-  font-size: 1.5em;
-  margin-top: 20px;
+  color: #1a1a1a; /* Color del título secundario */
+  font-size: 1.5em; /* Tamaño del título secundario */
+  margin-top: 20px; /* Margen superior del título secundario */
 }
 
 label {
-  display: block;
-  margin-bottom: 10px;
-  color: #333;
+  display: block; /* Mostrar etiquetas como bloques */
+  margin-bottom: 10px; /* Margen inferior de las etiquetas */
+  color: #333; /* Color del texto de las etiquetas */
 }
 
 /* Estilos para los inputs de tipo número */
 input[type="number"] {
-  width: 80%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  margin-bottom: 20px;
-  font-size: 1em;
-  color: #333;
-}
-
-/* Estilos para el botón de calcular */
-#boton-calcular {
-  padding: 10px 20px;
-  background-color: #008CBA;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
-#boton-mostrar-resultado {
-  padding: 10px 20px;
-  background-color: #008CBA;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
-/* Estilos para el botón de reiniciar */
-#boton-reiniciar {
-  padding: 10px 20px;
-  background-color: #008CBA;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  cursor: pointer;
+  width: 80%; /* Ancho del input de tipo número */
+  padding: 10px; /* Relleno del input de tipo número */
+  border: none; /* Eliminar borde del input de tipo número */
+  border-radius: 5px; /* Radio de borde del input de tipo número */
+  background-color: #f9f9f9; /* Color de fondo del input de tipo número */
+  margin-bottom: 20px; /* Margen inferior del input de tipo número */
+  font-size: 1em; /* Tamaño del texto del input de tipo número */
+  color: #333; /* Color del texto del input de tipo número */
 }
 
 /* Estilos para los botones */
-.boton,
+#boton-calcular,
+#boton-mostrar-resultado,
+#boton-reiniciar,
 #boton-volver {
-  padding: 10px 20px;
-  background-color: #008CBA;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  cursor: pointer;
+  padding: 10px 20px; /* Relleno de los botones */
+  background-color: #008CBA; /* Color de fondo de los botones */
+  color: #fff; /* Color del texto de los botones */
+  border: none; /* Eliminar borde de los botones */
+  border-radius: 5px; /* Radio de borde de los botones */
+  font-size: 1.2em; /* Tamaño del texto de los botones */
+  cursor: pointer; /* Cambiar cursor a apuntador */
 }
 
 /* Estilos para el gráfico */
 #grafico {
-  background-color: white;
-  text-align: center;
+  background-color: white; /* Color de fondo del gráfico */
+  text-align: center; /* Alineación del texto del gráfico */
 }
 
 /* Estilos para los enlaces */
 a:link,
 a:visited {
-  color: #000000;
+  color: #000000; /* Color de los enlaces no visitados y visitados */
 }
 
 a:hover {
-  font-size: 1.4em;
+  font-size: 1.4em; /* Cambiar tamaño del texto al pasar el ratón sobre los enlaces */
 }
