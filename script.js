@@ -1,4 +1,9 @@
-// Función para mostrar un valor en un elemento HTML
+/**
+ * Muestra en pantalla el valor que se ingresa en la barra
+ * @method mostrarValor
+ * @param {string} id - Id del elemento input del HTML
+ * @param {number} valor - Contiene el valor del input que ingreso el usuario en la barra
+ */
 let mostrarValor = (id, valor) => {
   document.getElementById(id).textContent = valor;
 }
