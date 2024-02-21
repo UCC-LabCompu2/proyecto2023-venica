@@ -107,7 +107,7 @@ let aparecerImagen = () => {
   const ctx = canvas.getContext("2d");
 
   let img = new Image();
-  img.src = "imagenes/auto.png";
+  img.src = "Imagenes/auto.png";
 
   canvas.width = canvas.width; // Limpiar el canvas
 
