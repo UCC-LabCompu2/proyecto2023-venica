@@ -45,7 +45,7 @@ let animarImagen = () => {
   vi = parseFloat(document.getElementById("v0").value);
 
   let img = new Image();
-  img.src = "imagenes/auto.png";
+  img.src = "Imagenes/auto.png";
 
   // Dibujar la imagen en el canvas
   img.onload = function () {
